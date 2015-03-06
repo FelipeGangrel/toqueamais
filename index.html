@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<title>Toque A+</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="">
+		<meta name="description" content="">
+		<meta name="keywords" content="" />
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<meta http-equiv="content-language" content="pt-br">
+		<meta name="reply-to" content="contato@kweekdesign.com.br">
+		<!-- Le CSS -->
+		<link rel="stylesheet" type="text/css" href="assets/css/grid.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/modal.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/portfolio.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/font-awesome-ie7.min.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+		<link href='http://fonts.googleapis.com/css?family=Lato:300,400,300italic' rel='stylesheet' type='text/css'>
+		<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>s
+		<![endif]-->
+
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+		<script type="text/javascript" src="assets/js/jquery.easing.min.js"></script>	
+		<script type="text/javascript" src="assets/js/jquery.mixitup.min.js"></script>
+		<!--<script type="text/javascript" src="assets/js/menu.js"></script>-->
+		<script type="text/javascript" src="assets/js/scroll.js"></script>
+
+  
+
+
+		<script type="text/javascript">
+		$(function () {
+			
+			var filterList = {
+			
+				init: function () {
+				
+					// MixItUp plugin
+					// http://mixitup.io
+					$('#portfoliolist').mixitup({
+						targetSelector: '.portfolio',
+						filterSelector: '.filter',
+						effects: ['fade'],
+						easing: 'snap',
+						// call the hover effect
+						onMixEnd: filterList.hoverEffect()
+					});				
+				
+				},
+				
+				hoverEffect: function () {
+				
+					// Simple parallax effect
+					$('#portfoliolist .portfolio').hover(
+						function () {
+							$(this).find('.label').stop().animate({bottom: 0}, 200, 'easeOutQuad');
+							$(this).find('img').stop().animate({top: -60}, 500, 'easeOutQuad');				
+						},
+						function () {
+							$(this).find('.label').stop().animate({bottom: -80}, 200, 'easeInQuad');
+							$(this).find('img').stop().animate({top: 0}, 300, 'easeOutQuad');								
+						}		
+					);				
+				
+				}
+
+			};
+			
+			// Run the show!
+			filterList.init();
+		
+		});	
+		</script>
+
+
+  <script>
+  $(function() {
+   var pull   = $('#pull');
+     menu   = $('nav ul');
+
+   $(pull).on('click', function(e) {
+    e.preventDefault();
+    menu.slideToggle();
+   });
+   
+   $(window).resize(function(){
+    var w = $(this).width();
+
+    if(w > 800 && menu.is(':hidden')) {
+     menu.removeAttr('style');
+    }
+   });
+
+   $('li').on('click', function(e) {    
+    var w = $(window).width();
+    if(w < 800 ) {
+     menu.slideToggle();
+    }
+   });
+
+   $('.panel').height($(window).height());
+   
+  });
+  </script>
+
+	</head>
+
+	<body>
+  <div id="navbar">
+   <div class="navbar-wrapper">
+   <div class="logo">
+    <a href="#area1"><img src="assets/images/logo.png" width="80"> Toque a mais</a>
+   </div>
+   <div class="menu">
+    <nav class="clearfix">
+     <ul class="clearfix">
+         <li><a href="#area1">Início</a></li>
+         <li><a href="#area3">Produtos</a></li>
+         <li><a href="#area4">Empresa</a></li>
+         <li><a href="#area5">Contato</a></li>
+     </ul>
+     <a href="#" id="pull">Menu</a>
+    </nav>
+   </div>
+  </div>
+  </div>
+ 
+ 
+	
+		<div class="grid wfull slide" id="area1">
+			<div class="grid w960">
+				<div class="row">
+					<div class="c12">
+						<div class="slogan">
+							<h2>Olá. Somos a Toque A Mais Alimentos e produzimos salgadinhos saborosos.</h2>
+							<h3>Conheça nossos produtos, nossa história e seja nosso parceiro.</h3>
+						</div>
+					</div>
+					<div class="c12">
+						<p class="center"><a href="#area2" class="btn big">Conheça</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="grid wfull slide" id="area2">
+			<div class="grid w960">
+				<div class="row">
+					<div class="c4">
+						<img src="assets/images/medalha.png" class="badge">
+						<h3 class="center">Produzimos com qualidade</h3>
+						<p class="center">Dispomos de equipamentos modernos, laboratório de análises químicas e sensoriais, além de um processo produtivo automatizado.</p>
+						<p class="center"><a href="#area3" class="btn">Linha de produtos</a></p>
+					</div>
+					<div class="c4">
+						<img src="assets/images/coracao.png" class="badge">
+						<h3 class="center">Pensando em você</h3>
+						<p class="center">Estamos ao seu lado à mais de 10 anos e com nossa logística própria levamos para a sua mesa produtos sempre fresquinhos e saudáveis.</p>
+						<p class="center"><a href="#area4" class="btn">Nossa empresa</a></p>
+					</div>
+					<div class="c4">
+						<img src="assets/images/parceria.png" class="badge">
+						<h3 class="center">Parceiros de confiança</h3>
+						<p class="center">Contamos com parceiros para fabricação de marcas próprias como a rede de supermercados Bramil, Mundial, Royal, Venturão, Casa do arroz, entre outros.</p>
+						<p class="center"><a href="#area5" class="btn">Seja nosso parceiro</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="produto oculto" id="produto1">
+			
+			<div class="conteudo">
+				<div class="row">
+				<div class="c6">
+					<h2>Lorem ipsum Exercitation magna Duis</h2>
+					<p>Lorem ipsum Pariatur exercitation sit ut eiusmod ut aute labore incididunt Duis sit quis consequat. Lorem ipsum Adipisicing incididunt culpa quis.</p>
+				</div>
+				<div class="c6">
+					<table class="valores">
+						<tr>
+							<th colspan="2">Quantidade por porção</th><th>Valor Diário (%)</th>
+						</tr>
+						<tr>
+							<td class="col1">Nononono</td><td class="col2">xxxxxx</td><td class="col3">xx %</td>
+						</tr>
+						<tr>
+							<td class="col1">Nononono</td><td class="col2">xxxxxx</td><td class="col3">xx %</td>
+						</tr>
+						<tr>
+							<td class="col1">Nononono</td><td class="col2">xxxxxx</td><td class="col3">xx %</td>
+						</tr>
+						<tr>
+							<td class="col1">Nononono</td><td class="col2">xxxxxx</td><td class="col3">xx %</td>
+						</tr>
+						<tr>
+							<td class="col1">Nononono</td><td class="col2">xxxxxx</td><td class="col3">xx %</td>
+						</tr>
+						<tr>
+							<td class="col1">Nononono</td><td class="col2">xxxxxx</td><td class="col3">xx %</td>
+						</tr>
+						<tr>
+							<td class="col1">Nononono</td><td class="col2">xxxxxx</td><td class="col3">xx %</td>
+						</tr>
+						<tr>
+							<td class="col1">Nononono</td><td class="col2">xxxxxx</td><td class="col3">xx %</td>
+						</tr>
+					</table>
+				</div>
+				</div>
+    <div class="row">
+      <div class="c12">
+       <p class="center"><a class="fechar btn" href="#!">Fechar <i class="icon-remove"></i></a></p>
+      </div>
+    </div>
+			</div>
+		</div>
+
+		<div class="produto oculto" id="produto2">
+   
+   <div class="conteudo">
+    <div class="row">
+    <div class="c6">
+     <h2>Lorem ipsum Exercitation magna Duis</h2>
+     <p>Lorem ipsum Pariatur exercitation sit ut eiusmod ut aute labore incididunt Duis sit quis consequat. Lorem ipsum Adipisicing incididunt culpa quis.</p>
+    </div>
+    <div class="c6">
+     <table class="valores">
+      <tr>
+       <th colspan="2">Quantidade por porção</th><th>Valor Diário (%)</th>
+      </tr>
+      <tr>
+       <td class="col1">Nononono</td><td class="col2">xxxxxx</td><td class="col3">xx %</td>
+      </tr>
+      <tr>
+       <td class="col1">Nononono</td><td class="col2">xxxxxx</td><td class="col3">xx %</td>
+      </tr>
+      <tr>
+       <td class="col1">Nononono</td><td class="col2">xxxxxx</td><td class="col3">xx %</td>
+      </tr>
+      <tr>
+       <td class="col1">Nononono</td><td class="col2">xxxxxx</td><td class="col3">xx %</td>
+      </tr>
+      <tr>
+       <td class="col1">Nononono</td><td class="col2">xxxxxx</td><td class="col3">xx %</td>
+      </tr>
+      <tr>
+       <td class="col1">Nononono</td><td class="col2">xxxxxx</td><td class="col3">xx %</td>
+      </tr>
+      <tr>
+       <td class="col1">Nononono</td><td class="col2">xxxxxx</td><td class="col3">xx %</td>
+      </tr>
+      <tr>
+       <td class="col1">Nononono</td><td class="col2">xxxxxx</td><td class="col3">xx %</td>
+      </tr>
+     </table>
+    </div>
+    </div>
+    <div class="row">
+      <div class="c12">
+       <p class="center"><a class="fechar btn" href="#!">Fechar <i class="icon-remove"></i></a></p>
+      </div>
+    </div>
+   </div>
+  </div>
+
+		<div class="produto oculto" id="produto3">
+   
+   <div class="conteudo">
+    <div class="row">
+    <div class="c6">
+     <h2>Lorem ipsum Exercitation magna Duis</h2>
+     <p>Lorem ipsum Pariatur exercitation sit ut eiusmod ut aute labore incididunt Duis sit quis consequat. Lorem ipsum Adipisicing incididunt culpa quis.</p>
+    </div>
+    <div class="c6">
+     <table class="valores">
+      <tr>
+       <th colspan="2">Quantidade por porção</th><th>Valor Diário (%)</th>
+      </tr>
+      <tr>
+       <td class="col1">Nononono</td><td class="col2">xxxxxx</td><td class="col3">xx %</td>
+      </tr>
+      <tr>
+       <td class="col1">Nononono</td><td class="col2">xxxxxx</td><td class="col3">xx %</td>
+      </tr>
+      <tr>
+       <td class="col1">Nononono</td><td class="col2">xxxxxx</td><td class="col3">xx %</td>
+      </tr>
+      <tr>
+       <td class="col1">Nononono</td><td class="col2">xxxxxx</td><td class="col3">xx %</td>
+      </tr>
+      <tr>
+       <td class="col1">Nononono</td><td class="col2">xxxxxx</td><td class="col3">xx %</td>
+      </tr>
+      <tr>
+       <td class="col1">Nononono</td><td class="col2">xxxxxx</td><td class="col3">xx %</td>
+      </tr>
+      <tr>
+       <td class="col1">Nononono</td><td class="col2">xxxxxx</td><td class="col3">xx %</td>
+      </tr>
+      <tr>
+       <td class="col1">Nononono</td><td class="col2">xxxxxx</td><td class="col3">xx %</td>
+      </tr>
+     </table>
+    </div>
+    </div>
+    <div class="row">
+      <div class="c12">
+       <p class="center"><a class="fechar btn" href="#!">Fechar <i class="icon-remove"></i></a></p>
+      </div>
+    </div>
+   </div>
+  </div>
+
+		<div class="produto oculto" id="produto4">
+   
+   <div class="conteudo">
+    <div class="row">
+    <div class="c6">
+     <h2>Lorem ipsum Exercitation magna Duis</h2>
+     <p>Lorem ipsum Pariatur exercitation sit ut eiusmod ut aute labore incididunt Duis sit quis consequat. Lorem ipsum Adipisicing incididunt culpa quis.</p>
+    </div>
+    <div class="c6">
+     <table class="valores">
+      <tr>
+       <th colspan="2">Quantidade por porção</th><th>Valor Diário (%)</th>
+      </tr>
+      <tr>
+       <td class="col1">Nononono</td><td class="col2">xxxxxx</td><td class="col3">xx %</td>
+      </tr>
+      <tr>
+       <td class="col1">Nononono</td><td class="col2">xxxxxx</td><td class="col3">xx %</td>
+      </tr>
+      <tr>
+       <td class="col1">Nononono</td><td class="col2">xxxxxx</td><td class="col3">xx %</td>
+      </tr>
+      <tr>
+       <td class="col1">Nononono</td><td class="col2">xxxxxx</td><td class="col3">xx %</td>
+      </tr>
+      <tr>
+       <td class="col1">Nononono</td><td class="col2">xxxxxx</td><td class="col3">xx %</td>
+      </tr>
+      <tr>
+       <td class="col1">Nononono</td><td class="col2">xxxxxx</td><td class="col3">xx %</td>
+      </tr>
+      <tr>
+       <td class="col1">Nononono</td><td class="col2">xxxxxx</td><td class="col3">xx %</td>
+      </tr>
+      <tr>
+       <td class="col1">Nononono</td><td class="col2">xxxxxx</td><td class="col3">xx %</td>
+      </tr>
+     </table>
+    </div>
+    </div>
+    <div class="row">
+      <div class="c12">
+       <p class="center"><a class="fechar btn" href="#!">Fechar <i class="icon-remove"></i></a></p>
+      </div>
+    </div>
+   </div>
+  </div>
+
+		<div class="produto oculto" id="produto5">
+   
+   <div class="conteudo">
+    <div class="row">
+    <div class="c6">
+     <h2>Lorem ipsum Exercitation magna Duis</h2>
+     <p>Lorem ipsum Pariatur exercitation sit ut eiusmod ut aute labore incididunt Duis sit quis consequat. Lorem ipsum Adipisicing incididunt culpa quis.</p>
+    </div>
+    <div class="c6">
+     <table class="valores">
+      <tr>
+       <th colspan="2">Quantidade por porção</th><th>Valor Diário (%)</th>
+      </tr>
+      <tr>
+       <td class="col1">Nononono</td><td class="col2">xxxxxx</td><td class="col3">xx %</td>
+      </tr>
+      <tr>
+       <td class="col1">Nononono</td><td class="col2">xxxxxx</td><td class="col3">xx %</td>
+      </tr>
+      <tr>
+       <td class="col1">Nononono</td><td class="col2">xxxxxx</td><td class="col3">xx %</td>
+      </tr>
+      <tr>
+       <td class="col1">Nononono</td><td class="col2">xxxxxx</td><td class="col3">xx %</td>
+      </tr>
+      <tr>
+       <td class="col1">Nononono</td><td class="col2">xxxxxx</td><td class="col3">xx %</td>
+      </tr>
+      <tr>
+       <td class="col1">Nononono</td><td class="col2">xxxxxx</td><td class="col3">xx %</td>
+      </tr>
+      <tr>
+       <td class="col1">Nononono</td><td class="col2">xxxxxx</td><td class="col3">xx %</td>
+      </tr>
+      <tr>
+       <td class="col1">Nononono</td><td class="col2">xxxxxx</td><td class="col3">xx %</td>
+      </tr>
+     </table>
+    </div>
+    </div>
+    <div class="row">
+      <div class="c12">
+       <p class="center"><a class="fechar btn" href="#!">Fechar <i class="icon-remove"></i></a></p>
+      </div>
+    </div>
+   </div>
+  </div>
+
+		<div class="produto oculto" id="produto6">
+   
+   <div class="conteudo">
+    <div class="row">
+    <div class="c6">
+     <h2>Lorem ipsum Exercitation magna Duis</h2>
+     <p>Lorem ipsum Pariatur exercitation sit ut eiusmod ut aute labore incididunt Duis sit quis consequat. Lorem ipsum Adipisicing incididunt culpa quis.</p>
+    </div>
+    <div class="c6">
+     <table class="valores">
+      <tr>
+       <th colspan="2">Quantidade por porção</th><th>Valor Diário (%)</th>
+      </tr>
+      <tr>
+       <td class="col1">Nononono</td><td class="col2">xxxxxx</td><td class="col3">xx %</td>
+      </tr>
+      <tr>
+       <td class="col1">Nononono</td><td class="col2">xxxxxx</td><td class="col3">xx %</td>
+      </tr>
+      <tr>
+       <td class="col1">Nononono</td><td class="col2">xxxxxx</td><td class="col3">xx %</td>
+      </tr>
+      <tr>
+       <td class="col1">Nononono</td><td class="col2">xxxxxx</td><td class="col3">xx %</td>
+      </tr>
+      <tr>
+       <td class="col1">Nononono</td><td class="col2">xxxxxx</td><td class="col3">xx %</td>
+      </tr>
+      <tr>
+       <td class="col1">Nononono</td><td class="col2">xxxxxx</td><td class="col3">xx %</td>
+      </tr>
+      <tr>
+       <td class="col1">Nononono</td><td class="col2">xxxxxx</td><td class="col3">xx %</td>
+      </tr>
+      <tr>
+       <td class="col1">Nononono</td><td class="col2">xxxxxx</td><td class="col3">xx %</td>
+      </tr>
+     </table>
+    </div>
+    </div>
+    <div class="row">
+      <div class="c12">
+       <p class="center"><a class="fechar btn" href="#!">Fechar <i class="icon-remove"></i></a></p>
+      </div>
+    </div>
+   </div>
+  </div>
+
+
+		<div class="grid wfull slide" id="area3">
+
+			<div class="grid w960">
+				<div class="row">
+					<div class="c12">
+						<h1>Nossa linha de produtos</h1>
+					</div>
+				</div>
+
+				<div class="row">
+
+					<div class="container">
+
+						<div id="portfoliolist">
+							
+							<div class="portfolio">
+								<div class="portfolio-wrapper">				
+									<a href="#produto1"><img src="assets/images/produto.jpg" alt="" /></a>
+									<div class="label">
+										<div class="label-text">
+											<a class="text-title">Nome do Produto</a>
+											<span class="text-description">Descrição do produto</span>
+										</div>
+										<div class="label-bg"></div>
+									</div>
+								</div>
+							</div>
+													
+							<div class="portfolio">
+								<div class="portfolio-wrapper">				
+									<a href="#produto2"><img src="assets/images/produto2.jpg" alt="" /></a>
+									<div class="label">
+										<div class="label-text">
+											<a class="text-title">Nome do Produto</a>
+											<span class="text-description">Descrição do produto</span>
+										</div>
+										<div class="label-bg"></div>
+									</div>
+								</div>
+							</div>
+			
+							<div class="portfolio">
+								<div class="portfolio-wrapper">				
+									<a href="#produto3"><img src="assets/images/produto3.jpg" alt="" /></a>
+									<div class="label">
+										<div class="label-text">
+											<a class="text-title">Nome do Produto</a>
+											<span class="text-description">Descrição do produto</span>
+										</div>
+										<div class="label-bg"></div>
+									</div>
+								</div>
+							</div>
+		
+							<div class="portfolio">
+								<div class="portfolio-wrapper">				
+									<a href="#produto4"><img src="assets/images/produto4.jpg" alt="" /></a>
+									<div class="label">
+										<div class="label-text">
+											<a class="text-title">Nome do Produto</a>
+											<span class="text-description">Descrição do produto</span>
+										</div>
+										<div class="label-bg"></div>
+									</div>
+								</div>
+							</div>
+							
+							<div class="portfolio">
+								<div class="portfolio-wrapper">				
+									<a href="#produto5"><img src="assets/images/produto5.jpg" alt="" /></a>
+									<div class="label">
+										<div class="label-text">
+											<a class="text-title">Nome do Produto</a>
+											<span class="text-description">Descrição do produto</span>
+										</div>
+										<div class="label-bg"></div>
+									</div>
+								</div>
+							</div>
+				
+							<div class="portfolio">
+								<div class="portfolio-wrapper">				
+									<a href="#produto6"><img src="assets/images/produto6.jpg" alt="" /></a>
+									<div class="label">
+										<div class="label-text">
+											<a class="text-title">Nome do Produto</a>
+											<span class="text-description">Descrição do produto</span>
+										</div>
+										<div class="label-bg"></div>
+									</div>
+								</div>
+							</div>
+						
+						</div><!-- fim portfolio list-->
+					</div><!--Fim container-->
+
+				</div>
+			</div>
+
+		</div><!-- Fim da area 3-->
+
+		<div class="grid wfull slide" id="area4">
+			<div class="grid w960">
+				<div class="row">
+					<div class="c12">
+						<h1>Uma história com você</h1>
+					</div>
+				</div>
+				<div class="row">
+					<div class="c6">
+						<p>A Toque A Mais Alimentos foi criada na cidade de Vassouras, Rio de Janeiro e iniciou suas atividades na década de 2000.</p>
+						<p>Todo início é muito difícil. A produção das batatas fritas era realizada de forma artesanal em um pequeno espaço de 20 m². De lá pra cá, a empresa passou por um intenso processo de crescimento e atualmente conta com uma ampla sede administrativa com 5200 m². Além de modernos equipamentos, laboratório de análises químicas e sensoriais e logística própria, a Toque A Mais Alimentos. ainda dispõe de um processo produtivo automatizado.
+						A partir de 2009, a empresa decide diversificar sua linha de produtos com o lançamento de Salgadinho de Milho, Biscoitos de Polvilho e Salgadinho de Trigo.</p> 
+						<p>Em 2011, uma nova programação visual deu aos seus produtos um melhor destaque nos pontos de vendas. E com o objetivo de trabalhar individualmente cada marca, cria embalagens para cada produto:</p>
+						<ul>
+							<li>Batata Palha - Tique A+</li>
+							<li>Batata Ondulada - Crekezitos</li>
+							<li>Salgadinhos de milho - Fanzitos</li>
+							<li>Cebolones e Ratatunes</li>
+							<li>Salgadinho de Trigo - Baconzones</li>
+							<li>Biscoito de Polvilho - Polvinhos</li>
+						</ul>
+					</div>
+					<div class="c6">
+						<p>A Toque A Mais Alimentos ainda desenvolve outras atividades no seguimento de alimentos para atender ao varejo, produzindo para os supermercadistas as chamadas marcas próprias. Essa é uma tendência que ganha cada vez mais espaço no carrinho de compras e começam a ocupar um espaço destinado às marcas tradicionais em todos os segmentos.</p>
+						<p>Atualmente, a empresa conta com parceiros para fabricação de marcas próprias: rede de supermercados Bramil, Mundial, Royal, Venturão, Casa do Arroz, Amavita, Litig, HiperChips, entre outros.</p>
+						<h3>Sua marca</h3>
+						<p>Com larga experiência na fabricação de marcas de terceirizadas, a Toque A Mais Alimentos atingiu um alto nível de capacitação e a partir de 2012 está focada no desenvolvimento e fabricação de novas marcas próprias a parceiros interessados na diversificação de novos produtos.</p>
+						<p>Faça-nos uma consulta e solicite uma proposta. Produza seus produtos com a Toque A Mais Alimentos.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="grid wfull slide" id="area5">
+			<div class="grid w960">
+				<div class="row">
+					<div class="c12">
+						<h1>Contato</h1>
+      <p>Clientes e parceiros de negócos podem entrar em contato com a Toque A Mais Alimentos através do telefone 24 2471 1107, pelo email contato@toqueamais.com.br ou pelo formulário de contato. Esperamos pelo seu contato.</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="c6">
+						<iframe class="mapa" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com.br/maps?f=q&amp;source=s_q&amp;hl=pt-BR&amp;geocode=&amp;q=Vassouras+-+Rio+de+Janeiro&amp;aq=0&amp;oq=vassouras&amp;sll=-22.066441,-42.924029&amp;sspn=3.049158,4.938354&amp;ie=UTF8&amp;hq=&amp;hnear=Vassouras+-+Rio+de+Janeiro&amp;ll=-22.406637,-43.661059&amp;spn=0.380224,0.617294&amp;t=m&amp;z=11&amp;output=embed"></iframe>
+					</div>
+					<div class="c6">
+						<h3>24 2491 1107</h3>
+						<h3>contato@toqueamais.com.br</h3>
+						<form method="post" id="form-contato" action="enviaemail.php">
+						<span class="form-label"><i class="icon-user"></i></span>
+		  				<input class="input" type="text" id="nome" name="nome" placeholder="Nome" required>
+		  				<span class="form-label"><i class="icon-envelope"></i></span>
+		  				<input class="input" type="email" id="email" name="email" placeholder="Email" required>
+		  				<span class="form-label mensagem"><i class="icon-comment"></i></span>
+		  				<textarea class="input mensagem" id="mensagem" name="mensagem" placeholder="Mensagem" required></textarea>
+					  	<input class="btn" id="enviar" type="submit" name="enviar" value="Enviar">
+					  	<div id="sucesso" class="sucesso"></div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="grid wfull" id="area6">
+			<div class="grid w960">
+				<div class="row">
+					<div class="c12">
+						 <div class="social-links">
+        <div class="social twitter"><a href="#"><img src="assets/images/twitter.png"></a></div>
+        <div class="social facebook"><a href="#"><img src="assets/images/facebook.png"></a></div>
+        <div class="social linkedin"><a href="#"><img src="assets/images/linkedin.png"></a></div>
+       </div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</body>
+
+</html>
